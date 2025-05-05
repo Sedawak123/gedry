@@ -1,61 +1,96 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<body>
+    <h1>DESA MART</h1>
+    <p><em>Solusi Pemasaran Digital untuk UMKM Desa</em></p>
 
-## About Laravel
+<h2>Identitas</h2>
+    <p><strong>Nama:</strong> GEDRY</p>
+    <p><strong>NIM:</strong> D0223504</p>
+    <p><strong>Mata Kuliah:</strong> Frame Work Base</p>
+    <p><strong>Tahun:</strong> 2025</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<h2>Peran dan Fitur-fiturnya</h2>
+    <h3>Admin</h3>
+    <ul>
+        <li>Mengelola data pengguna</li>
+        <li>Mengelola data produk</li>
+        <li>Mengelola kategori produk</li>
+        <li>Melihat laporan penjualan</li>
+    </ul>
+    <h3>Penjual</h3>
+    <ul>
+        <li>Menambah dan mengedit produk</li>
+        <li>Melihat pesanan dari pembeli</li>
+        <li>Memperbarui status pesanan</li>
+    </ul>
+    <h3>Pembeli</h3>
+    <ul>
+        <li>Melihat dan mencari produk</li>
+        <li>Melakukan pemesanan</li>
+        <li>Melihat riwayat pembelian</li>
+    </ul>
+    <h2>Tabel-tabel Database</h2>
+    <h3>1. Tabel Pengguna</h3>
+    <table>
+        <tr><th>Nama Lapangan</th><th>Tipe Data</th><th>Keterangan</th></tr>
+        <tr><td>id_pengguna</td><td>BIGINT</td><td>Kunci Utama</td></tr>
+        <tr><td>nama</td><td>VARCHAR(255)</td><td>Nama pengguna</td></tr>
+        <tr><td>e-mail</td><td>VARCHAR(255)</td><td>Email pengguna</td></tr>
+        <tr><td>kata_sandi</td><td>VARCHAR(255)</td><td>Kata sandi pengguna</td></tr>
+        <tr><td>telepon</td><td>VARCHAR(255) NULL</td><td>Nomor telepon</td></tr>
+        <tr><td>alamat</td><td>TEXT NULL</td><td>Alamat pengguna</td></tr>
+        <tr><td>peran</td><td>ENUM</td><td>admin/penjual/pembeli</td></tr>
+        <tr><td>dibuat_pada</td><td>timestamp</td><td>-</td></tr>
+        <tr><td>diperbarui_pada</td><td>timestamp</td><td>-</td></tr>
+    </table>
+    <h3>2. Tabel Kategori</h3>
+    <table>
+        <tr><th>Nama Lapangan</th><th>Tipe Data</th><th>Keterangan</th></tr>
+        <tr><td>id_kategori</td><td>BIGINT</td><td>Kunci Utama</td></tr>
+        <tr><td>nama</td><td>VARCHAR(255)</td><td>Nama Kategori</td></tr>
+        <tr><td>dibuat_pada</td><td>timestamp</td><td>-</td></tr>
+        <tr><td>diperbarui_pada</td><td>timestamp</td><td>-</td></tr>
+    </table>
+    <h3>3. Tabel Produk</h3>
+    <table>
+        <tr><th>Nama Lapangan</th><th>Tipe Data</th><th>Keterangan</th></tr>
+        <tr><td>id_produk</td><td>BIGINT</td><td>Kunci Utama</td></tr>
+        <tr><td>id_pengguna</td><td>BIGINT</td><td>Kunci Asing ke pengguna</td></tr>
+        <tr><td>id_kategori</td><td>BIGINT NULL</td><td>Kunci Asing ke kategori</td></tr>
+        <tr><td>nama</td><td>VARCHAR(255)</td><td>Nama produk</td></tr>
+        <tr><td>deskripsi</td><td>TEXT</td><td>Deskripsi produk</td></tr>
+        <tr><td>harga</td><td>DECIMAL(10,2)</td><td>Harga produk</td></tr>
+        <tr><td>stok</td><td>INT</td><td>Jumlah stok</td></tr>
+        <tr><td>url_gambar</td><td>VARCHAR(255) NULL</td><td>URL gambar produk</td></tr>
+        <tr><td>dibuat_pada</td><td>timestamp</td><td>-</td></tr>
+        <tr><td>diperbarui_pada</td><td>timestamp</td><td>-</td></tr>
+    </table>
+    <h3>4. Tabel Pesanan</h3>
+    <table>
+        <tr><th>Nama Lapangan</th><th>Tipe Data</th><th>Keterangan</th></tr>
+        <tr><td>id_pesanan</td><td>BIGINT</td><td>Kunci Utama</td></tr>
+        <tr><td>id_pembelian</td><td>BIGINT</td><td>Kunci Asing ke pengguna (pembeli)</td></tr>
+        <tr><td>total_harga</td><td>DECIMAL(10,2)</td><td>Total harga pesanan</td></tr>
+        <tr><td>status</td><td>ENUM</td><td>tertunda/dikirim/selesai</td></tr>
+        <tr><td>dibuat_pada</td><td>timestamp</td><td>-</td></tr>
+        <tr><td>diperbarui_pada</td><td>timestamp</td><td>-</td></tr>
+    </table>
+    <h3>5. Tabel Detail Pesanan</h3>
+    <table>
+        <tr><th>Nama Lapangan</th><th>Tipe Data</th><th>Keterangan</th></tr>
+        <tr><td>detail_id</td><td>BIGINT</td><td>Kunci Utama</td></tr>
+        <tr><td>id_pesanan</td><td>BIGINT</td><td>Kunci Asing ke pesanan</td></tr>
+        <tr><td>id_produk</td><td>BIGINT</td><td>Kunci Asing ke produk</td></tr>
+        <tr><td>jumlah</td><td>INT</td><td>Jumlah produk</td></tr>
+        <tr><td>subtotal</td><td>DECIMAL(10,2)</td><td>Subtotal harga</td></tr>
+    </table>
+    <h2>Jenis Relasi dan Tabel yang Berelasi</h2>
+    <ul>
+        <li>pengguna (1) -- (M) produk: Satu pengguna (penjual) dapat memiliki banyak produk</li>
+        <li>kategori (1) -- (M) produk: Satu kategori dapat memiliki banyak produk</li>
+        <li>pengguna (1) -- (M) pesanan: Satu pengguna (pembeli) dapat memiliki banyak pesanan</li>
+        <li>pesanan (1) -- (M) detail_pesanan: Satu pesanan memiliki banyak detail pesanan</li>
+        <li>produk (1) -- (M) detail_pesanan: Satu produk dapat ada di banyak detail pesanan</li>
+    </ul>
+</body>
+</html>
